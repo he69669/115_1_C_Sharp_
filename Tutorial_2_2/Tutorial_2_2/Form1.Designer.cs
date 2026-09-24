@@ -1,6 +1,6 @@
 ﻿namespace Tutorial_2_2
 {
-    partial class Form1
+    partial class form
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.messageButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // messageButton
+            // 
+            this.messageButton.Location = new System.Drawing.Point(276, 190);
+            this.messageButton.Name = "messageButton";
+            this.messageButton.Size = new System.Drawing.Size(186, 72);
+            this.messageButton.TabIndex = 0;
+            this.messageButton.Text = "顯示訊息";
+            this.messageButton.UseVisualStyleBackColor = true;
+            this.messageButton.Click += new System.EventHandler(this.messageButton_Click);
+            // 
+            // form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 484);
+            this.Controls.Add(this.messageButton);
+            this.Name = "form";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button messageButton;
     }
 }
 
